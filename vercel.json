@@ -1,0 +1,15 @@
+
+{
+  "functions": {
+    "api/ws.js": {
+      "memory": 128
+    },
+    "api/telegram.js": {
+      "memory": 128
+    }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
+}
